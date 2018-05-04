@@ -1,0 +1,29 @@
+#timeLabel {
+  display: 'none';
+  font-size: 70;
+  font-family: Colfax-Light;
+  text-length: 32;
+  text-anchor: start;
+  x: 5%;
+  y: 95%;
+  fill: white;
+}
+
+#locationLabel {
+  display: 'none';
+  font-size: 25;
+  font-family: Colfax;
+  text-length: 30;
+  text-anchor: start;
+  x: 7%;
+  y: 75%;
+  fill: white;
+}
+
+#backgroundImage {
+  display: 'inline';
+  x: 0;
+  y: 0;
+  width: 348;
+  height: 270;
+}
