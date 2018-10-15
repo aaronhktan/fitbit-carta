@@ -1,4 +1,8 @@
 {
+  "devDependencies": {
+    "@fitbit/sdk": "~1.0.0",
+    "@fitbit/sdk-cli": "^1.0.0"
+  },
   "fitbit": {
     "appUUID": "061a63ca-2b86-4843-b354-e9003eac4c97",
     "appType": "clockface",
@@ -20,5 +24,8 @@
         "name": "Maps Watchface"
       }
     }
+  },
+  "scripts": {
+    "build": "fitbit-build"
   }
 }
