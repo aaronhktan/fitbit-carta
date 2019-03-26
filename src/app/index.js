@@ -5,7 +5,7 @@ import { inbox } from 'file-transfer';
 import * as messaging from 'messaging';
 import { today } from 'user-activity';
 import { preferences } from 'user-settings';
-import * as util from '../common/utils';
+import * as util from './utils';
 
 import UI from './ui'
 import Settings from './settings'
@@ -54,15 +54,13 @@ ui.rectFull.onmousedown = () => {
 // Update settings every time we receive a message
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.key == 'timePlacement') {
-    let res = JSON.parse(evt.data.newValue);
-    let timePlacement = res['values'][0]['value'];
+    let timePlacement = evt.data.data.values[0].value;
     console.log(`Received timePlacement: ${timePlacement}`);
     
     ui.setTimeLabelLocation(timePlacement);
     settings.timeLabelOption = timePlacement;
   } else if (evt.data.key == 'city') {
-    let res = JSON.parse(evt.data.newValue);
-    let location = res['name'];
+    let location = evt.data.data['name'];
     console.log(`Received location: ${location}`);
     
     settings.location = location;
